@@ -1,129 +1,62 @@
-/* =========================
-   @region Font Tanımı
-   Projede kullanılan özel fontu ekler
-   ========================= */
-@font-face {
-  font-family: 'EduVICWANTHand';
-  src: url('Edu_VIC_WA_NT_Hand/static/EduVICWANTHand-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
+/* 
+* Google 1998 Homepage Styles
+* Bu CSS dosyası, Google'ın 1998 yılındaki ana sayfasının tasarımını oluşturmak için kullanılmıştır.
+* Stiller, mantıksal gruplar halinde düzenlenmiştir ve her bölüm açıklamalarla belirtilmiştir.
+*/
 
-/* =========================
-   @region Genel Layout Ayarları
-   Sayfanın temel yüksekliği ve flex düzeni
-   ========================= */
-html, body {
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-}
-
+/* 
+* Temel Sayfa Düzeni
+* Bu bölüm, sayfanın genel görünümünü ve temel düzenini belirler
+*/
 body {
-  display: flex; /* Dikeyde sıralama için flex kullanıldı */
-  flex-direction: column;
-  min-height: 100vh;
-  font-family: 'EduVICWANTHand', Arial, sans-serif;
-  background: #f8f6f4;
+    /* Sayfa yazı tipi ve hizalama ayarları */
+    font-family: Arial, sans-serif;    /* Yazı tipi olarak Arial kullanılır, bulunamazsa sans-serif yazı tiplerinden biri kullanılır */
+    text-align: center;                /* Tüm içerik sayfada ortalanır */
+    margin-top: 100px;                 /* Sayfanın üst kısmında 100 piksel boşluk bırakılır */
 }
 
-/* =========================
-   @region Header (Üst Menü)
-   ========================= */
-header {
-  flex: 0 0 auto;
-  background: #a3cef1;
-  color: #22223b;
-  padding: 20px 0;
-  text-align: center;
-  border-bottom: 2px solid #a3cef1;
+/* 
+* Logo Bölümü
+* Google logosunun konumlandırılması ve görünümü
+*/
+.logo {
+    margin-bottom: 20px;               /* Logo ile altındaki öğeler arasında 20 piksel boşluk bırakılır */
 }
 
-header h1 {
-  margin: 0;
-  font-size: 2.5em;
-  letter-spacing: 2px;
+/* 
+* Arama Kutusu
+* Google'ın ana arama kutusunun boyutlandırılması ve görünümü
+*/
+.search-box {
+    width: 300px;                      /* Arama kutusunun genişliği */
+    padding: 5px;                      /* İçerik ile kenarlar arası boşluk */
+    margin-bottom: 10px;               /* Arama kutusu ile altındaki öğeler arası boşluk */
 }
 
-nav a {
-  color: #22223b;
-  text-decoration: none;
-  margin: 0 15px;
-  font-weight: bold;
-  transition: color 0.3s;
+/* 
+* Arama Butonları
+* "Google Search" ve "I'm Feeling Lucky" butonlarının düzeni
+*/
+.search-buttons {
+    margin: 10px;                      /* Butonların etrafındaki boşluk */
 }
 
-nav a:hover {
-  color: #ff6f61;
+.search-buttons input {
+    margin: 0 5px;                     /* Butonlar arası yatay boşluk */
+    padding: 5px 10px;                 /* Buton içeriği ile kenarlar arası boşluk */
 }
 
-/* =========================
-   @region Main (İçerik ve Scroll İşlemi)
-   Sadece bu alan kaydırılabilir (scrollable)
-   ========================= */
-main {
-  flex: 1 1 auto;
-  overflow-y: auto; /* Sadece içerik alanı kaydırılabilir */
-  padding: 30px 10px 60px 10px;
-  box-sizing: border-box;
-  border-top: 2px solid #a3cef1;
-  border-bottom: 2px solid #a3cef1;
+/* 
+* Alt Bilgi (Footer) Bölümü
+* Sayfanın alt kısmındaki linklerin düzeni ve görünümü
+*/
+.footer {
+    margin-top: 50px;                  /* Footer ile üstündeki içerik arası boşluk */
+    font-size: 12px;                   /* Footer yazı boyutu */
 }
 
-.center {
-  text-align: center;
-}
-
-.center-list {
-  list-style-position: inside;
-  text-align: center;
-  padding-left: 0;
-}
-
-.center-list li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-/* =========================
-   @region Ürün Kartları
-   ========================= */
-.product-list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
-  max-width: 350px;
-  margin: 0 auto;
-}
-
-.product {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  padding: 20px;
-  text-align: center;
-  width: 300px;
-}
-
-.product img {
-  width: 100%;
-  height: 120px;
-  object-fit: contain;
-  margin-bottom: 10px;
-}
-
-/* =========================
-   @region Footer (Alt Bilgi)
-   ========================= */
-footer {
-  flex: 0 0 auto;
-  background: #a3cef1;
-  color: #22223b;
-  text-align: center;
-  padding: 10px 0;
-  width: 100%;
-  position: relative;
-  bottom: 0;
-  left: 0;
+.footer a {
+    margin: 0 5px;                     /* Linkler arası yatay boşluk */
+    color: #0000EE;                    /* Link rengi (klasik mavi) */
+    text-decoration: none;             /* Linklerin altı çizili olmaz */
 } 
