@@ -51,6 +51,8 @@ Bu proje, aşağıdaki konularda pratik yapma imkanı sunar:
 3. Değişikliklerinizi commit edin (`git commit -am 'Yeni özellik: Açıklama'`)
 4. Branch'inizi push edin (`git push origin feature/yeniOzellik`)
 5. Bir Pull Request oluşturun
+<img width="1280" alt="projectScreeen" src="https://github.com/user-attachments/assets/d8b7d65b-0abe-4743-ac73-54e9278b6e08" />
+
 
 ## Lisans
 
